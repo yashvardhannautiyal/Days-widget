@@ -1,4 +1,5 @@
 import React from "react";
+import ThemeToggle from "./ThemeToggle";
 
 function App() {
   const currentDate = new Date();
@@ -28,7 +29,7 @@ function App() {
   const progressPercent = (daysPassed / totalDays) * 100;
 
   return (
-    <div className="border-1">
+    <div className="border border-white flex flex-col items-center p-4">
       {/* year + theme container  */}
       <div>
         <div>
@@ -36,7 +37,9 @@ function App() {
           <h1 className="text-red-400">{currentYear}</h1>
         </div>
 
-        <div>THEME</div>
+        <div>
+          <ThemeToggle />
+        </div>
       </div>
 
       {/* days left + passed container  */}
