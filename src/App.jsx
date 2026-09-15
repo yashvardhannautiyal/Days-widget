@@ -29,12 +29,12 @@ function App() {
   const progressPercent = (daysPassed / totalDays) * 100;
 
   return (
-    <div className="border border-white flex flex-col items-center p-4">
+    <div className="border border-gray-700 flex flex-col w-xs p-6 rounded-3xl bg-gray-900">
       {/* year + theme container  */}
-      <div>
+      <div className="flex items-center justify-between w-full">
         <div>
-          <p className="text-gray-50">YEAR</p>
-          <h1 className="text-red-400">{currentYear}</h1>
+          <p className="text-gray-400 font-medium text-xs">YEAR</p>
+          <h1 className="text-white text-4xl font-semibold">{currentYear}</h1>
         </div>
 
         <div>
@@ -43,27 +43,31 @@ function App() {
       </div>
 
       {/* days left + passed container  */}
-      <div>
+      <div className="flex items-center gap-18 w-full mt-5">
         <div>
-          <p className="text-gray-50">DAYS PASSED</p>
-          <p className="text-gray-50">{daysPassed}</p>
+          <p className="text-gray-400 font-medium text-xs">DAYS PASSED</p>
+          <p className="text-gray-50 text-4xl font-semibold">{daysPassed}</p>
         </div>
 
         <div>
-          <p className="text-gray-50">DAYS LEFT</p>
-          <p className="text-gray-50">{daysRemaining}</p>
+          <p className="text-gray-400 font-medium text-xs">DAYS LEFT</p>
+          <p className="text-gray-50 text-4xl font-semibold">{daysRemaining}</p>
         </div>
       </div>
 
-
       {/* percentage  */}
-      <div>
+      <div className=" mt-5">
         <div>
-          <p className="text-gray-50">
+          <p className="text-gray-400 font-medium text-sm">
             {progressPercent.toFixed(1)}% completed{" "}
           </p>
         </div>
-        <div>slider</div>
+        <div className="w-full h-2 bg-blue-950 rounded-full overflow-hidden mt-2">
+          <div
+            className="h-full bg-white rounded-full"
+            style={{ width: `${progressPercent}%` }}
+          ></div>
+        </div>
       </div>
     </div>
   );
