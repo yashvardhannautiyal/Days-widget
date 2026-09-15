@@ -30,9 +30,9 @@ function App() {
 
   return (
     <div
-      className="border border-gray-700 flex flex-col w-xs p-6 rounded-3xl bg-gradient-to-br from-white via-slate-100 to-indigo-100 dark:from-gray-950
+      className="flex flex-col w-3xs p-4 rounded-3xl bg-gradient-to-br from-white via-slate-100 to-indigo-100 dark:from-gray-950
     dark:via-gray-900
-    dark:to-slate-700"
+    dark:to-slate-700 shadow-lg shadow-gray-700 dark:shadow-gray-800"
     >
       {/* year + theme container  */}
       <div className="flex items-center justify-between w-full">

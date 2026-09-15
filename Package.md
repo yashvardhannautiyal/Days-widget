@@ -1,0 +1,5 @@
+Electron
+
+concurrently
+
+wait-on
